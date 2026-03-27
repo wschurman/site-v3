@@ -83,19 +83,25 @@ h1 {
 }
 
 .network-grid {
+   list-style: none;
+   padding: 0;
    display: flex;
    flex-wrap: wrap;
    gap: 0.65rem;
 }
 
-.network {
+.network-grid li {
    flex: 1 1 205px;
    min-width: 0;
+}
+
+.network {
    text-decoration: none;
    color: inherit;
    border: 1px solid var(--line);
    border-radius: 11px;
    background: var(--card);
+    height: 100%;
    padding: 0.72rem;
    display: flex;
    align-items: center;
@@ -147,15 +153,15 @@ h1 {
    text-overflow: ellipsis;
 }
 
-#net_gh .icon-b {
+.network[data-network="github"] .icon-b {
    color: #0f6df7;
 }
 
-#net_lf .icon-b {
+.network[data-network="lastfm"] .icon-b {
    color: #d62246;
 }
 
-#net_ig .icon-b {
+.network[data-network="instagram"] .icon-b {
    color: #d95b2f;
 }
 
@@ -196,7 +202,7 @@ h1 {
       min-height: 100vh;
    }
 
-   .network {
+   .network-grid li {
       flex-basis: 100%;
    }
 }
