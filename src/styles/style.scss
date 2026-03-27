@@ -104,9 +104,11 @@ h1 {
    background: var(--card);
    height: 100%;
    padding: 0.72rem;
-   display: flex;
+   display: grid;
+   grid-template-columns: auto minmax(0, 1fr);
+   column-gap: 0.68rem;
+   row-gap: 0.1rem;
    align-items: center;
-   gap: 0.68rem;
    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
    animation: card-in 420ms ease-out both;
 }
@@ -135,20 +137,17 @@ h1 {
    height: 1.75rem;
    flex: 0 0 auto;
    display: block;
-}
-
-.network-text {
-   display: flex;
-   flex-direction: column;
-   min-width: 0;
+   grid-row: 1 / span 2;
 }
 
 .net_name {
+   min-width: 0;
    font-weight: 600;
    font-size: 0.95rem;
 }
 
 .p {
+   min-width: 0;
    color: var(--muted);
    font-size: 0.8rem;
    white-space: nowrap;
@@ -189,6 +188,16 @@ h1 {
    to {
       opacity: 1;
       transform: translateY(0);
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   *,
+   *::before,
+   *::after {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
    }
 }
 
