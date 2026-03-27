@@ -46,7 +46,7 @@ html {
 }
 
 body {
-   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
    color: var(--ink);
    width: min(700px, calc(100% - 2rem));
    margin: clamp(1rem, 3vw, 2.2rem) auto;
@@ -71,9 +71,11 @@ body {
 }
 
 h1 {
-   font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
    color: var(--heading);
    font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+   font-weight: 600;
+   letter-spacing: 0.01em;
    line-height: 1;
 }
 
@@ -142,7 +144,7 @@ h1 {
 }
 
 .net_name {
-   font-weight: 700;
+   font-weight: 600;
    font-size: 0.95rem;
 }
 
